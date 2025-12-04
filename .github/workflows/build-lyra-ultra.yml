@@ -22,3 +22,8 @@ jobs:
           KERNEL_CONFIGURE=no \
           EXPERT=yes
 
+    - name: Upload Armbian Image Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: armbian-image
+        path: output/images/*
