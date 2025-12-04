@@ -1,0 +1,23 @@
+name: Build Armbian Lyra Ultra
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Build Armbian image
+      run: |
+        sudo ./compile.sh \
+          BOARD=lyra-ultra \
+          BRANCH=vendor \
+          RELEASE=trixie \
+          BUILD_MINIMAL=yes \
+          BUILD_DESKTOP=no \
+          KERNEL_CONFIGURE=no \
+          EXPERT=yes
