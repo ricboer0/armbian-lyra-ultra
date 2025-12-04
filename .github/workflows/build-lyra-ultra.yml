@@ -13,7 +13,7 @@ jobs:
 
     - name: Build Armbian image
       run: |
-        sudo ./compile.sh \
+        COLUMNS=160 GITHUB_ACTIONS=true sudo -E ./compile.sh \
           BOARD=luckfox-lyra-ultra \
           BRANCH=vendor \
           RELEASE=trixie \
@@ -21,3 +21,4 @@ jobs:
           BUILD_DESKTOP=no \
           KERNEL_CONFIGURE=no \
           EXPERT=yes
+
