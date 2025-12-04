@@ -23,7 +23,7 @@ jobs:
           EXPERT=yes
 
     - name: Upload Armbian Image Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: armbian-image
         path: output/images/*
