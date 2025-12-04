@@ -1,0 +1,11 @@
+# Rockchip RK3506B triple core 512MB SoC 1x100MBe EMMC USB2
+BOARD_NAME="Luckfox Lyra Ultra"
+BOARDFAMILY="rockchip"
+BOOTCONFIG="luckfox-lyra-ultra-rk3506b_defconfig"
+BOARD_MAINTAINER="Riccardo Boero"
+KERNEL_TARGET="vendor"
+BOOT_FDT_FILE="rk3506b-luckfox-lyra-ultra.dtb"
+BOOT_SCENARIO="spl-blobs"
+IMAGE_PARTITION_TABLE="gpt"
+BOOT_SOC="rk3506"
+DDR_BLOB="rk35/rk3506b_ddr_750MHz_v1.06.bin"
