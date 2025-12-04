@@ -14,7 +14,7 @@ jobs:
     - name: Build Armbian image
       run: |
         sudo ./compile.sh \
-          BOARD=lyra-ultra \
+          BOARD=luckfox-lyra-ultra \
           BRANCH=vendor \
           RELEASE=trixie \
           BUILD_MINIMAL=yes \
