@@ -20,7 +20,7 @@ jobs:
           BUILD_MINIMAL=yes \
           BUILD_DESKTOP=no \
           KERNEL_CONFIGURE=no \
-          BUILD_ALL=yes
+          EXPERT=yes
 
     - name: Upload Armbian Image Artifact
       uses: actions/upload-artifact@v4
@@ -28,8 +28,3 @@ jobs:
         name: armbian-image
         path: output/images/*
 
-    - name: Upload U-Boot Loader Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: uboot-loader
-        path: output/debs/linux-u-boot-*-lyra-ultra_*.deb
