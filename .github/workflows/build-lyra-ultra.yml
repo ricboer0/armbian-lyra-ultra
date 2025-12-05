@@ -27,3 +27,9 @@ jobs:
       with:
         name: armbian-image
         path: output/images/*
+
+    - name: Upload U-Boot Loader Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: uboot-loader
+        path: output/debs/linux-u-boot-*-lyra-ultra_*.deb
